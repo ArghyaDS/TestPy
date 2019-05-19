@@ -1,3 +1,4 @@
+#AssertionError handling in simple operation
 div=int(input("Enter dividend: "))
 divs=int(input("Enter divisor: "))
 try:
