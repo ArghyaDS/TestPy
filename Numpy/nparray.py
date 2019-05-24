@@ -1,4 +1,5 @@
 import numpy as np
+
 #Difference between max and min values in an array, percentile value, median value
 a=np.arange(12).reshape(2,6)
 print(f"Original array:\n{a}")
@@ -8,6 +9,7 @@ r2=np.percentile(a,80,1)
 print(f"Largest integer smaller or equal to the division of the inputs:\n{r2}")
 r3=np.median(a)
 print(f"Median of said array:\n{r3}")
+
 #Weighted average of an array (over second axis)
 b=np.arange(5)
 w=np.arange(1,6)
@@ -17,12 +19,14 @@ x=np.arange(9).reshape(3,3)
 print(f"Original array:\n{x}")
 avg=np.average(x,axis=1,weights=[1./4,2./4,2./4])
 print(f"weighted average over specified axis:\n{avg}")
+
 #Mean, standard deviation, variance of an array
 c=np.arange(6)
 m=np.mean(c)
 s=np.std(c)
 v=np.var(c)
 print(f"Mean:\n{m}\nstd:\n{s}\nvariance:\n{v}")
+
 #Covariance matrix and cross-correlation between two arrays
 d=np.array([0,1,2]); f=np.array([0,1,3])
 e=np.array([2,1,0]); g=np.array([2,4,5])
@@ -31,9 +35,11 @@ print(f"Covariance matrix:\n{np.cov(d,e)}")
 print(f"Original array1:\n{f}\nOriginal array2:\n{g}")
 print(f"Cross-correlation matrix:\n{np.cov(f,g)}")
 print(f"Pearson product-moment correlation coefficients:\n{np.corrcoef(f,g)}")
+
 #Find occurance of each val
 arr=np.array([0,1,6,1,4,2,2,7])
 print(f"Number of occurrences of each value in array:\n{np.bincount(arr)}")
+
 #Basic histogram of nums against bins
 import matplotlib.pyplot as plt
 nums=np.array([0.5,0.7,1.0,1.2,1.3,2.1])
